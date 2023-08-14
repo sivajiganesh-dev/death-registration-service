@@ -3,6 +3,7 @@ CREATE TABLE egov_dt_registration
     id               character varying(64) NOT NULL,
     tenantid         character varying(50) NOT NULL,
     applicationno    character varying(64) NOT NULL,
+    applicantid      character varying(64),
     firstname        character varying(200),
     lastname         character varying(200),
     placeofdeath     character varying(1000),
