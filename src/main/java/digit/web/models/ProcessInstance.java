@@ -1,20 +1,25 @@
 package digit.web.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-
+import java.util.ArrayList;
+import java.util.List;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.ArrayList;
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@EqualsAndHashCode(of = { "id" })
+@EqualsAndHashCode(of = {"id"})
 @ToString
 public class ProcessInstance {
 
@@ -64,8 +69,9 @@ public class ProcessInstance {
         if (this.documents == null) {
             this.documents = new ArrayList<>();
         }
-        if (!this.documents.contains(documentsItem))
+        if (!this.documents.contains(documentsItem)) {
             this.documents.add(documentsItem);
+        }
 
         return this;
     }

@@ -23,7 +23,11 @@ public class DeathApplicationEnrichment {
     private UserUtil userUtils;
 
     public void enrichDeathApplication(DeathRegistrationRequest deathRegistrationRequest) {
-        List<String> deathRegistrationIdList = idgenUtil.getIdList(deathRegistrationRequest.getRequestInfo(), deathRegistrationRequest.getDeathRegistrationApplications().get(0).getTenantId(), "dtr.registrationid", "", deathRegistrationRequest.getDeathRegistrationApplications().size());
+        List<String> deathRegistrationIdList = idgenUtil.getIdList(
+            deathRegistrationRequest.getRequestInfo(),
+            deathRegistrationRequest.getDeathRegistrationApplications().get(0).getTenantId(),
+            "dtr.registrationid", "",
+            deathRegistrationRequest.getDeathRegistrationApplications().size());
         Integer index = 0;
         for (DeathRegistrationApplication application : deathRegistrationRequest.getDeathRegistrationApplications()) {
             //Enrich application number from IDgen
@@ -49,12 +53,16 @@ public class DeathApplicationEnrichment {
         }
     }
 
-    public void enrichDeathApplicationUponUpdate(DeathRegistrationRequest deathRegistrationRequest) {
+    public void enrichDeathApplicationUponUpdate(
+        DeathRegistrationRequest deathRegistrationRequest) {
         // Enrich lastModifiedTime and lastModifiedBy in case of update
-        deathRegistrationRequest.getDeathRegistrationApplications().forEach(deathRegistrationApplication -> {
-            deathRegistrationApplication.getAuditDetails().setLastModifiedTime(System.currentTimeMillis());
-            deathRegistrationApplication.getAuditDetails().setLastModifiedBy(deathRegistrationRequest.getRequestInfo().getUserInfo().getUuid());
-        });
+        deathRegistrationRequest.getDeathRegistrationApplications()
+            .forEach(deathRegistrationApplication -> {
+                deathRegistrationApplication.getAuditDetails()
+                    .setLastModifiedTime(System.currentTimeMillis());
+                deathRegistrationApplication.getAuditDetails().setLastModifiedBy(
+                    deathRegistrationRequest.getRequestInfo().getUserInfo().getUuid());
+            });
 
 
     }

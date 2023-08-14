@@ -13,6 +13,7 @@ import org.egov.common.contract.response.ResponseInfo;
 @Getter
 @ToString
 public class UserDetailResponse {
+
     @JsonProperty("responseInfo")
     ResponseInfo responseInfo;
 

@@ -25,9 +25,11 @@ public class DeathRegistrationRepository {
     @Autowired
     private DeathApplicationRowMapper rowMapper;
 
-    public List<DeathRegistrationApplication>getApplications(DeathApplicationSearchCriteria searchCriteria){
+    public List<DeathRegistrationApplication> getApplications(
+        DeathApplicationSearchCriteria searchCriteria) {
         List<Object> preparedStmtList = new ArrayList<>();
-        String query = queryBuilder.getDeathApplicationSearchQuery(searchCriteria, preparedStmtList);
+        String query = queryBuilder.getDeathApplicationSearchQuery(searchCriteria,
+            preparedStmtList);
         log.info("Final query: " + query);
         return jdbcTemplate.query(query, preparedStmtList.toArray(), rowMapper);
     }

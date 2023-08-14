@@ -81,17 +81,17 @@ public class UserUtil {
         if (users != null) {
             users.forEach(map -> {
                     map.put("createdDate", dateTolong((String) map.get("createdDate"), format1));
-                if (map.get("lastModifiedDate") != null) {
-                    map.put("lastModifiedDate",
-                        dateTolong((String) map.get("lastModifiedDate"), format1));
-                }
-                if (map.get("dob") != null) {
-                    map.put("dob", dateTolong((String) map.get("dob"), dobFormat));
-                }
-                if (map.get("pwdExpiryDate") != null) {
-                    map.put("pwdExpiryDate",
-                        dateTolong((String) map.get("pwdExpiryDate"), format1));
-                }
+                    if (map.get("lastModifiedDate") != null) {
+                        map.put("lastModifiedDate",
+                            dateTolong((String) map.get("lastModifiedDate"), format1));
+                    }
+                    if (map.get("dob") != null) {
+                        map.put("dob", dateTolong((String) map.get("dob"), dobFormat));
+                    }
+                    if (map.get("pwdExpiryDate") != null) {
+                        map.put("pwdExpiryDate",
+                            dateTolong((String) map.get("pwdExpiryDate"), format1));
+                    }
                 }
             );
         }

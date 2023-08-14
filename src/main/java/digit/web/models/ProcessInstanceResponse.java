@@ -1,12 +1,15 @@
 package digit.web.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-import org.egov.common.contract.response.ResponseInfo;
-
-import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
+import javax.validation.Valid;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.egov.common.contract.response.ResponseInfo;
 
 @Getter
 @Setter
@@ -14,6 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class ProcessInstanceResponse {
+
     @JsonProperty("ResponseInfo")
     private ResponseInfo responseInfo;
 

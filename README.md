@@ -1,3 +1,1 @@
-
-
 ## Death Registration Service

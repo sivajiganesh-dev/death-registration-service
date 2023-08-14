@@ -14,15 +14,19 @@ import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.stereotype.Component;
 
 @Component
-public class DeathApplicationRowMapper implements ResultSetExtractor<List<DeathRegistrationApplication>> {
-    public List<DeathRegistrationApplication> extractData(ResultSet rs) throws SQLException, DataAccessException {
-        Map<String,DeathRegistrationApplication> deathRegistrationApplicationMap = new LinkedHashMap<>();
+public class DeathApplicationRowMapper implements
+    ResultSetExtractor<List<DeathRegistrationApplication>> {
 
-        while (rs.next()){
+    public List<DeathRegistrationApplication> extractData(ResultSet rs)
+        throws SQLException, DataAccessException {
+        Map<String, DeathRegistrationApplication> deathRegistrationApplicationMap = new LinkedHashMap<>();
+
+        while (rs.next()) {
             String uuid = rs.getString("dapplicationno");
-            DeathRegistrationApplication deathRegistrationApplication = deathRegistrationApplicationMap.get(uuid);
+            DeathRegistrationApplication deathRegistrationApplication = deathRegistrationApplicationMap.get(
+                uuid);
 
-            if(deathRegistrationApplication == null) {
+            if (deathRegistrationApplication == null) {
 
                 Long lastModifiedTime = rs.getLong("dlastmodifiedtime");
                 if (rs.wasNull()) {
@@ -30,23 +34,23 @@ public class DeathApplicationRowMapper implements ResultSetExtractor<List<DeathR
                 }
 
                 AuditDetails auditdetails = AuditDetails.builder()
-                        .createdBy(rs.getString("dcreatedby"))
-                        .createdTime(rs.getLong("dcreatedtime"))
-                        .lastModifiedBy(rs.getString("dlastmodifiedby"))
-                        .lastModifiedTime(lastModifiedTime)
-                        .build();
+                    .createdBy(rs.getString("dcreatedby"))
+                    .createdTime(rs.getLong("dcreatedtime"))
+                    .lastModifiedBy(rs.getString("dlastmodifiedby"))
+                    .lastModifiedTime(lastModifiedTime)
+                    .build();
 
                 deathRegistrationApplication = DeathRegistrationApplication.builder()
                     .applicationNumber(rs.getString("dapplicationno"))
-                        .tenantId(rs.getString("dtenantid"))
-                        .id(rs.getString("did"))
-                        .applicantId(rs.getString("dapplicantid"))
-                        .deceasedFirstName(rs.getString("dfirstname"))
-                        .deceasedLastName(rs.getString("dlastname"))
-                        .placeOfDeath(rs.getString("dplaceofdeath"))
-                        .timeOfDeath(rs.getLong("dtimeofdeath"))
-                        .auditDetails(auditdetails)
-                        .build();
+                    .tenantId(rs.getString("dtenantid"))
+                    .id(rs.getString("did"))
+                    .applicantId(rs.getString("dapplicantid"))
+                    .deceasedFirstName(rs.getString("dfirstname"))
+                    .deceasedLastName(rs.getString("dlastname"))
+                    .placeOfDeath(rs.getString("dplaceofdeath"))
+                    .timeOfDeath(rs.getLong("dtimeofdeath"))
+                    .auditDetails(auditdetails)
+                    .build();
             }
             addChildrenToProperty(rs, deathRegistrationApplication);
             deathRegistrationApplicationMap.put(uuid, deathRegistrationApplication);
@@ -54,20 +58,22 @@ public class DeathApplicationRowMapper implements ResultSetExtractor<List<DeathR
         return new ArrayList<>(deathRegistrationApplicationMap.values());
     }
 
-    private void addChildrenToProperty(ResultSet rs, DeathRegistrationApplication deathRegistrationApplication)
-            throws SQLException {
+    private void addChildrenToProperty(ResultSet rs,
+        DeathRegistrationApplication deathRegistrationApplication)
+        throws SQLException {
         addAddressToApplication(rs, deathRegistrationApplication);
     }
 
-    private void addAddressToApplication(ResultSet rs, DeathRegistrationApplication deathRegistrationApplication) throws SQLException {
+    private void addAddressToApplication(ResultSet rs,
+        DeathRegistrationApplication deathRegistrationApplication) throws SQLException {
 
         Address address = Address.builder()
-                .id(rs.getString("aid"))
-                .tenantId(rs.getString("atenantid"))
-                .city(rs.getString("acity"))
-                .pincode(rs.getString("pincode"))
-                .registrationId("deathregid")
-                .build();
+            .id(rs.getString("aid"))
+            .tenantId(rs.getString("atenantid"))
+            .city(rs.getString("acity"))
+            .pincode(rs.getString("pincode"))
+            .registrationId("deathregid")
+            .build();
 
         AuditDetails auditdetails = AuditDetails.builder()
             .createdBy(rs.getString("acreatedby"))

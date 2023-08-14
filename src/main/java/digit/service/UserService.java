@@ -28,9 +28,9 @@ import org.springframework.util.CollectionUtils;
 @Slf4j
 public class UserService {
 
-    private UserUtil userUtils;
+    private final UserUtil userUtils;
 
-    private MainConfiguration config;
+    private final MainConfiguration config;
 
     @Autowired
     public UserService(UserUtil userUtils, MainConfiguration config) {
@@ -109,8 +109,8 @@ public class UserService {
         if (userDetailResponse.getUser().isEmpty()) {
             throw new CustomException("INVALID_ACCOUNTID", "No user exist for the given accountId");
         } else {
-           User user =  userDetailResponse.getUser().get(0);
-           Applicant applicant =  Applicant.builder().userName(user.getUserName())
+            User user = userDetailResponse.getUser().get(0);
+            Applicant applicant = Applicant.builder().userName(user.getUserName())
                 .fatherOrSpouseName(user.getFatherOrSpouseName())
                 .mobileNumber(user.getMobileNumber())
                 .emailId(user.getEmailId())
@@ -119,11 +119,10 @@ public class UserService {
                 .roles(user.getRoles())
                 .name(user.getName())
                 .userType(user.getUserType())
-               .build();
+                .build();
             application.setApplicant(applicant);
         }
     }
-
 
 
     /**
