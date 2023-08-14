@@ -26,7 +26,7 @@ public class DeathApplicationValidator {
         });
     }
 
-    public List<DeathRegistrationApplication> validateApplicationUpdateRequest(
+    public void validateApplicationUpdateRequest(
         DeathRegistrationRequest deathRegistrationRequest) {
         List<String> ids = deathRegistrationRequest.getDeathRegistrationApplications().stream()
             .map(DeathRegistrationApplication::getId).collect(
@@ -37,6 +37,5 @@ public class DeathApplicationValidator {
             throw new CustomException("APPLICATION_DOES_NOT_EXIST",
                 "One of the application ids does not exist.");
         }
-        return deathRegistrationRequest.getDeathRegistrationApplications();
     }
 }

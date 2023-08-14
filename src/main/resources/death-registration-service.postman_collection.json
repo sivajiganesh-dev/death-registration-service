@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "522c8230-9b6d-45ab-9a42-1c66430352ef",
+		"name": "Death Registration Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16042369"
+	},
+	"item": [
+		{
+			"name": "Create Workflow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestInfo\": {\r\n        \"apiId\": \"asset-services\",\r\n        \"ver\": null,\r\n        \"ts\": null,\r\n        \"action\": null,\r\n        \"did\": null,\r\n        \"key\": null,\r\n        \"msgId\": \"search with from and to values\",\r\n        \"authToken\": \"{{authToken}}\",\r\n        \"userInfo\": {\r\n            \"id\": 24226,\r\n            \"uuid\": \"{{userUuid}}\",\r\n            \"userName\": \"{{username}}\",\r\n            \"name\": \"{{name}}\",\r\n            \"mobileNumber\": \"{{mobileNumber}}\",\r\n            \"emailId\": \"{{emailId}}\",\r\n            \"type\": \"EMPLOYEE\",\r\n            \"roles\": [\r\n                {\r\n                    \"name\": \"CSC Collection Operator\",\r\n                    \"code\": \"CSC_COLL_OPERATOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Employee\",\r\n                    \"code\": \"EMPLOYEE\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Grievance Routing Officer\",\r\n                    \"code\": \"GRO\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC counter employee\",\r\n                    \"code\": \"NOC_CEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Counter Employee\",\r\n                    \"code\": \"TL_CEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Counter Employee\",\r\n                    \"code\": \"TL_CEMP\",\r\n                    \"tenantId\": \"pb.jalandhar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Field Inspector\",\r\n                    \"code\": \"TL_FIELD_INSPECTOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Creator\",\r\n                    \"code\": \"TL_CREATOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Customer Support Representative\",\r\n                    \"code\": \"CSR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC counter Approver\",\r\n                    \"code\": \"NOC_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Approver\",\r\n                    \"code\": \"TL_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Super User\",\r\n                    \"code\": \"SUPERUSER\",\r\n                    \"tenantId\": \"pb\"\r\n                },\r\n                {\r\n                    \"name\": \"BPA Services Approver\",\r\n                    \"code\": \"BPA_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Field Employee\",\r\n                    \"code\": \"FEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Counter Employee\",\r\n                    \"code\": \"CEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC Field Inpector\",\r\n                    \"code\": \"NOC_FIELD_INSPECTOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NOC Department Approver\",\r\n                    \"code\": \"NOC_DEPT_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Super User\",\r\n                    \"code\": \"SUPERUSER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Grievance Officer\",\r\n                    \"code\": \"GO\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Anonymous User\",\r\n                    \"code\": \"ANONYMOUS\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Collection Operator\",\r\n                    \"code\": \"COLL_OPERATOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC Doc Verifier\",\r\n                    \"code\": \"NOC_DOC_VERIFIER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL doc verifier\",\r\n                    \"code\": \"TL_DOC_VERIFIER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                }\r\n            ],\r\n            \"active\": true,\r\n            \"tenantId\": \"{{tenantId}}\"\r\n        }\r\n    },\r\n    \"BusinessServices\": [\r\n        {\r\n            \"tenantId\": \"pb\",\r\n            \"businessService\": \"DTR\",\r\n            \"business\": \"death-registraion-services\",\r\n            \"businessServiceSla\": 432000000,\r\n            \"states\": [\r\n                {\r\n                    \"sla\": null,\r\n                    \"state\": null,\r\n                    \"applicationStatus\": null,\r\n                    \"docUploadRequired\": true,\r\n                    \"isStartState\": true,\r\n                    \"isTerminateState\": false,\r\n                    \"isStateUpdatable\": true,\r\n                    \"actions\": [\r\n                        {\r\n                            \"action\": \"APPLY\",\r\n                            \"nextState\": \"APPLIED\",\r\n                            \"roles\": [\r\n                                \"CITIZEN\",\r\n                                \"EMPLOYEE\"\r\n                            ]\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"sla\": null,\r\n                    \"state\": \"APPLIED\",\r\n                    \"applicationStatus\": \"APPLIED\",\r\n                    \"docUploadRequired\": false,\r\n                    \"isStartState\": false,\r\n                    \"isTerminateState\": true,\r\n                    \"isStateUpdatable\": false,\r\n                    \"actions\": [\r\n                        {\r\n                            \"action\": \"APPROVE\",\r\n                            \"nextState\": \"APPROVED\",\r\n                            \"roles\": [\r\n                                \"EMPLOYEE\"\r\n                            ]\r\n                        },\r\n                        {\r\n                            \"action\": \"REJECT\",\r\n                            \"nextState\": \"REJECTED\",\r\n                            \"roles\": [\r\n                                \"EMPLOYEE\"\r\n                            ]\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"sla\": null,\r\n                    \"state\": \"APPROVED\",\r\n                    \"applicationStatus\": \"APPROVED\",\r\n                    \"docUploadRequired\": false,\r\n                    \"isStartState\": false,\r\n                    \"isTerminateState\": false,\r\n                    \"isStateUpdatable\": false,\r\n                    \"actions\": [\r\n                        {\r\n                            \"action\": \"PAY\",\r\n                            \"nextState\": \"REGISTRATIONCOMPLETED\",\r\n                            \"roles\": [\r\n                                \"SYSTEM_PAYMENT\",\r\n                                \"CITIZEN\",\r\n                                \"EMPLOYEE\"\r\n                            ]\r\n                        }\r\n                    ]\r\n                },\r\n                {\r\n                    \"sla\": null,\r\n                    \"state\": \"REJECTED\",\r\n                    \"applicationStatus\": \"REJECTED\",\r\n                    \"docUploadRequired\": false,\r\n                    \"isStartState\": false,\r\n                    \"isTerminateState\": true,\r\n                    \"isStateUpdatable\": false,\r\n                    \"actions\": null\r\n                },\r\n                {\r\n                    \"sla\": null,\r\n                    \"state\": \"REGISTRATIONCOMPLETED\",\r\n                    \"applicationStatus\": \"REGISTRATIONCOMPLETED\",\r\n                    \"docUploadRequired\": false,\r\n                    \"isStartState\": false,\r\n                    \"isTerminateState\": true,\r\n                    \"isStateUpdatable\": false,\r\n                    \"actions\": null\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8280/egov-workflow-v2/egov-wf/businessservice/_create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8280",
+					"path": [
+						"egov-workflow-v2",
+						"egov-wf",
+						"businessservice",
+						"_create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Death Registration Application",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// Stores the DeathRegistrationApplications field in a collection variable",
+							"pm.test(\"save death registration application to collection variable\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    var deathRegistrationApplications = jsonData.DeathRegistrationApplications;",
+							"    pm.collectionVariables.set(\"registration_applications\", deathRegistrationApplications);",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestInfo\": {\r\n        \"apiId\": \"asset-services\",\r\n        \"ver\": null,\r\n        \"ts\": null,\r\n        \"action\": null,\r\n        \"did\": null,\r\n        \"key\": null,\r\n        \"msgId\": \"search with from and to values\",\r\n        \"authToken\": \"{{authToken}}\",\r\n        \"userInfo\": {\r\n            \"id\": 24226,\r\n            \"uuid\": \"5d332da5-7298-471d-b5da-1f60576a84ff\",\r\n            \"userName\": \"amr001\",\r\n            \"name\": \"leela\",\r\n            \"mobileNumber\": \"9814424443\",\r\n            \"emailId\": \"leela@llgmail.com\",\r\n            \"type\": \"EMPLOYEE\",\r\n            \"roles\": [\r\n                {\r\n                    \"name\": \"CSC Collection Operator\",\r\n                    \"code\": \"CSC_COLL_OPERATOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Employee\",\r\n                    \"code\": \"EMPLOYEE\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Grievance Routing Officer\",\r\n                    \"code\": \"GRO\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC counter employee\",\r\n                    \"code\": \"NOC_CEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Counter Employee\",\r\n                    \"code\": \"TL_CEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Counter Employee\",\r\n                    \"code\": \"TL_CEMP\",\r\n                    \"tenantId\": \"pb.jalandhar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Field Inspector\",\r\n                    \"code\": \"TL_FIELD_INSPECTOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Creator\",\r\n                    \"code\": \"TL_CREATOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Customer Support Representative\",\r\n                    \"code\": \"CSR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC counter Approver\",\r\n                    \"code\": \"NOC_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Approver\",\r\n                    \"code\": \"TL_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Super User\",\r\n                    \"code\": \"SUPERUSER\",\r\n                    \"tenantId\": \"pb\"\r\n                },\r\n                {\r\n                    \"name\": \"BPA Services Approver\",\r\n                    \"code\": \"BPA_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Field Employee\",\r\n                    \"code\": \"FEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Counter Employee\",\r\n                    \"code\": \"CEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC Field Inpector\",\r\n                    \"code\": \"NOC_FIELD_INSPECTOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NOC Department Approver\",\r\n                    \"code\": \"NOC_DEPT_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Super User\",\r\n                    \"code\": \"SUPERUSER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Grievance Officer\",\r\n                    \"code\": \"GO\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Anonymous User\",\r\n                    \"code\": \"ANONYMOUS\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Collection Operator\",\r\n                    \"code\": \"COLL_OPERATOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC Doc Verifier\",\r\n                    \"code\": \"NOC_DOC_VERIFIER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL doc verifier\",\r\n                    \"code\": \"TL_DOC_VERIFIER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                }\r\n            ],\r\n            \"active\": true,\r\n            \"tenantId\": \"pb.amritsar\"\r\n        }\r\n    },\r\n    \"DeathRegistrationApplications\": [\r\n        {\r\n            \"tenantId\": \"{{tenantId}}\",\r\n            \"deceasedFirstName\": \"{{firstname1}}\",\r\n            \"deceasedLastName\": \"{{lastname1}}\",\r\n            \"placeOfDeath\": \"Hyderabad\",\r\n            \"timeOfDeath\": 12062002,\r\n            \"addressOfDeceased\": {\r\n                \"tenantId\": \"{{tenantId}}\",\r\n                \"doorNo\": \"10101\",\r\n                \"latitude\": null,\r\n                \"longitude\": null,\r\n                \"addressNumber\": \"34 GA\",\r\n                \"userType\": \"RESIDENTIAL\",\r\n                \"addressLine1\": \"KP Layout\",\r\n                \"addressLine2\": \"\",\r\n                \"landmark\": \"Petrol pump road\",\r\n                \"city\": \"Amritsar\",\r\n                \"pincode\": 143502,\r\n                \"detail\": \"\",\r\n                \"buildingName\": \"Avigna Residence\",\r\n                \"street\": \"12th Main\",\r\n                \"locality\": {\r\n                    \"code\": \"AMR002\",\r\n                    \"name\": \"New Amritsar Localitys\"\r\n                }\r\n            },\r\n            \"applicant\": {\r\n                \"name\": \"Sanjay\",\r\n                \"userName\": \"Sinhani\",\r\n                \"mobileNumber\": \"9090909099\",\r\n                \"emailId\": \"axy@egovernments.org\",\r\n                \"altContactNumber\": \"\",\r\n                \"tenantId\": \"{{tenantId}}\",\r\n                \"userType\": \"CITIZEN\",\r\n                \"roles\": [\r\n                    {\r\n                        \"code\": \"CITIZEN\"\r\n                    }\r\n                ]\r\n            },\r\n            \"workflow\": {\r\n                \"action\": \"APPLY\",\r\n                \"assignes\": [],\r\n                \"comments\": \"Applying for death registration\",\r\n                \"verificationDocuments\": [\r\n                    {\r\n                        \"documentType\": \"PDF\",\r\n                        \"fileStoreId\": \"b0c5a846-c75a-11ea-87d0-0242ac130003\",\r\n                        \"documentUid\": \"\",\r\n                        \"additionalDetails\": {}\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/v1/registration/_create",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"v1",
+						"registration",
+						"_create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Death Registration Application",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestInfo\": {\r\n        \"apiId\": \"asset-services\",\r\n        \"ver\": null,\r\n        \"ts\": null,\r\n        \"action\": null,\r\n        \"did\": null,\r\n        \"key\": null,\r\n        \"msgId\": \"search with from and to values\",\r\n        \"authToken\": \"{{authToken}}\",\r\n        \"userInfo\": {\r\n            \"id\": 24226,\r\n            \"uuid\": \"5d332da5-7298-471d-b5da-1f60576a84ff\",\r\n            \"userName\": \"{{username}}\",\r\n            \"name\": \"{{name}}\",\r\n            \"mobileNumber\": \"{{mobileNumber}}\",\r\n            \"emailId\": \"{{emailId}}\",\r\n            \"type\": \"EMPLOYEE\",\r\n            \"roles\": [\r\n                {\r\n                    \"name\": \"CSC Collection Operator\",\r\n                    \"code\": \"CSC_COLL_OPERATOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Employee\",\r\n                    \"code\": \"EMPLOYEE\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Grievance Routing Officer\",\r\n                    \"code\": \"GRO\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC counter employee\",\r\n                    \"code\": \"NOC_CEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Counter Employee\",\r\n                    \"code\": \"TL_CEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Counter Employee\",\r\n                    \"code\": \"TL_CEMP\",\r\n                    \"tenantId\": \"pb.jalandhar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Field Inspector\",\r\n                    \"code\": \"TL_FIELD_INSPECTOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Creator\",\r\n                    \"code\": \"TL_CREATOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Customer Support Representative\",\r\n                    \"code\": \"CSR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC counter Approver\",\r\n                    \"code\": \"NOC_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Approver\",\r\n                    \"code\": \"TL_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Super User\",\r\n                    \"code\": \"SUPERUSER\",\r\n                    \"tenantId\": \"pb\"\r\n                },\r\n                {\r\n                    \"name\": \"BPA Services Approver\",\r\n                    \"code\": \"BPA_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Field Employee\",\r\n                    \"code\": \"FEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Counter Employee\",\r\n                    \"code\": \"CEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC Field Inpector\",\r\n                    \"code\": \"NOC_FIELD_INSPECTOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NOC Department Approver\",\r\n                    \"code\": \"NOC_DEPT_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Super User\",\r\n                    \"code\": \"SUPERUSER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Grievance Officer\",\r\n                    \"code\": \"GO\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Anonymous User\",\r\n                    \"code\": \"ANONYMOUS\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Collection Operator\",\r\n                    \"code\": \"COLL_OPERATOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC Doc Verifier\",\r\n                    \"code\": \"NOC_DOC_VERIFIER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL doc verifier\",\r\n                    \"code\": \"TL_DOC_VERIFIER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                }\r\n            ],\r\n            \"active\": true,\r\n            \"tenantId\": \"{{tenantId}}\"\r\n        }\r\n    },\r\n    \"DeathRegistrationApplications\": [\r\n        {\r\n            \"id\": \"d62de5b4-3e60-4384-94f4-81d993ab627f\",\r\n            \"tenantId\": \"pb.amritsar\",\r\n            \"applicationNumber\": \"PB-DTR-2023-08-14-2118018912\",\r\n            \"deceasedFirstName\": \"John\",\r\n            \"deceasedLastName\": \"Doee\",\r\n            \"placeOfDeath\": \"Hyderabad\",\r\n            \"timeOfDeath\": 12062002,\r\n            \"addressOfDeceased\": {\r\n                \"id\": \"f0d88e01-34ad-41ca-9b51-57e49d6cca15\",\r\n                \"tenantId\": \"pb.amritsar\",\r\n                \"registrationId\": \"d62de5b4-3e60-4384-94f4-81d993ab627f\",\r\n                \"latitude\": null,\r\n                \"longitude\": null,\r\n                \"addressId\": \"4e33567d-1ad5-4869-802a-74a91d4e648a\",\r\n                \"addressNumber\": \"34 GA\",\r\n                \"addressLine1\": \"KP Layout\",\r\n                \"addressLine2\": \"\",\r\n                \"landmark\": \"Petrol pump road\",\r\n                \"city\": \"Amritsar\",\r\n                \"pincode\": \"143502\",\r\n                \"detail\": \"\",\r\n                \"auditDetails\": {\r\n                    \"createdBy\": \"5d332da5-7298-471d-b5da-1f60576a84ff\",\r\n                    \"lastModifiedBy\": \"5d332da5-7298-471d-b5da-1f60576a84ff\",\r\n                    \"createdTime\": 1692017895670,\r\n                    \"lastModifiedTime\": 1692017895670\r\n                }\r\n            },\r\n            \"applicant\": {\r\n                \"tenantId\": \"pb.amritsar\",\r\n                \"id\": \"c4c8a94a-85ef-4685-b1ac-651e49858aa8\",\r\n                \"uuid\": null,\r\n                \"userName\": \"Sinhani\",\r\n                \"name\": \"Sanjay\",\r\n                \"userType\": \"CITIZEN\",\r\n                \"gender\": null,\r\n                \"password\": null,\r\n                \"salutation\": null,\r\n                \"pan\": null,\r\n                \"aadhaarNumber\": null,\r\n                \"mobileNumber\": \"9090909099\",\r\n                \"emailId\": \"axy@egovernments.org\",\r\n                \"roles\": [\r\n                    {\r\n                        \"tenantId\": null,\r\n                        \"id\": null,\r\n                        \"name\": null,\r\n                        \"code\": \"CITIZEN\",\r\n                        \"description\": null\r\n                    }\r\n                ],\r\n                \"permanentAddress\": null,\r\n                \"permanentCity\": null,\r\n                \"permanentPincode\": null,\r\n                \"correspondencePincode\": null,\r\n                \"active\": null,\r\n                \"locale\": null,\r\n                \"signature\": null,\r\n                \"accountLocked\": null,\r\n                \"fatherOrSpouseName\": null,\r\n                \"bloodGroup\": null,\r\n                \"identificationMark\": null,\r\n                \"photo\": null\r\n            },\r\n            \"applicantId\": \"c4c8a94a-85ef-4685-b1ac-651e49858aa8\",\r\n            \"auditDetails\": {\r\n                \"createdBy\": \"5d332da5-7298-471d-b5da-1f60576a84ff\",\r\n                \"lastModifiedBy\": \"5d332da5-7298-471d-b5da-1f60576a84ff\",\r\n                \"createdTime\": 1692017895670,\r\n                \"lastModifiedTime\": 1692017895670\r\n            },\r\n            \"workflow\": {\r\n                \"action\": \"APPROVE\",\r\n                \"status\": null,\r\n                \"comments\": \"Aprrove death registration application\",\r\n                \"assignes\": [],\r\n                \"documents\": null\r\n            }\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/death-registration-service/death-services/v1/registration/_update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"death-registration-service",
+						"death-services",
+						"v1",
+						"registration",
+						"_update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Death Registration Application",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"RequestInfo\": {\r\n        \"apiId\": \"asset-services\",\r\n        \"ver\": null,\r\n        \"ts\": null,\r\n        \"action\": null,\r\n        \"did\": null,\r\n        \"key\": null,\r\n        \"msgId\": \"search with from and to values\",\r\n        \"authToken\": \"{{authToken}}\",\r\n        \"userInfo\": {\r\n            \"id\": 24226,\r\n            \"uuid\": \"5d332da5-7298-471d-b5da-1f60576a84ff\",\r\n            \"userName\": \"amr001\",\r\n            \"name\": \"leela\",\r\n            \"mobileNumber\": \"9814424443\",\r\n            \"emailId\": \"leela@llgmail.com\",\r\n            \"type\": \"EMPLOYEE\",\r\n            \"roles\": [\r\n                {\r\n                    \"name\": \"CSC Collection Operator\",\r\n                    \"code\": \"CSC_COLL_OPERATOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Employee\",\r\n                    \"code\": \"EMPLOYEE\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Grievance Routing Officer\",\r\n                    \"code\": \"GRO\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC counter employee\",\r\n                    \"code\": \"NOC_CEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Counter Employee\",\r\n                    \"code\": \"TL_CEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Counter Employee\",\r\n                    \"code\": \"TL_CEMP\",\r\n                    \"tenantId\": \"pb.jalandhar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Field Inspector\",\r\n                    \"code\": \"TL_FIELD_INSPECTOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Creator\",\r\n                    \"code\": \"TL_CREATOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Customer Support Representative\",\r\n                    \"code\": \"CSR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC counter Approver\",\r\n                    \"code\": \"NOC_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL Approver\",\r\n                    \"code\": \"TL_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Super User\",\r\n                    \"code\": \"SUPERUSER\",\r\n                    \"tenantId\": \"pb\"\r\n                },\r\n                {\r\n                    \"name\": \"BPA Services Approver\",\r\n                    \"code\": \"BPA_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Field Employee\",\r\n                    \"code\": \"FEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Counter Employee\",\r\n                    \"code\": \"CEMP\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC Field Inpector\",\r\n                    \"code\": \"NOC_FIELD_INSPECTOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NOC Department Approver\",\r\n                    \"code\": \"NOC_DEPT_APPROVER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Super User\",\r\n                    \"code\": \"SUPERUSER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Grievance Officer\",\r\n                    \"code\": \"GO\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Anonymous User\",\r\n                    \"code\": \"ANONYMOUS\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"Collection Operator\",\r\n                    \"code\": \"COLL_OPERATOR\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"NoC Doc Verifier\",\r\n                    \"code\": \"NOC_DOC_VERIFIER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                },\r\n                {\r\n                    \"name\": \"TL doc verifier\",\r\n                    \"code\": \"TL_DOC_VERIFIER\",\r\n                    \"tenantId\": \"pb.amritsar\"\r\n                }\r\n            ],\r\n            \"active\": true,\r\n            \"tenantId\": \"pb.amritsar\"\r\n        }\r\n    },\r\n    \"DeathApplicationSearchCriteria\": {\r\n        \"tenantId\": \"pb.amritsar\",\r\n        \"status\": \"\",\r\n        \"ids\": [\r\n            \"pb.amritsar&ids=35a96aea-48a4-42b3-b570-3c422f14828a\"\r\n        ],\r\n        \"applicationNumber\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/death-registration-service/death-services/v1/registration/_search?ids=d62de5b4-3e60-4384-94f4-81d993ab627f&ids=qwe&tenantId=pb.amritsar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"death-registration-service",
+						"death-services",
+						"v1",
+						"registration",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "applicationnumber",
+							"value": "PB-BTR-2022-08-30-000307",
+							"disabled": true
+						},
+						{
+							"key": "ids",
+							"value": "d62de5b4-3e60-4384-94f4-81d993ab627f"
+						},
+						{
+							"key": "ids",
+							"value": "qwe"
+						},
+						{
+							"key": "tenantId",
+							"value": "pb.amritsar"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "tenantId",
+			"value": "pb.amritsar",
+			"type": "string"
+		},
+		{
+			"key": "firstname1",
+			"value": "John",
+			"type": "string"
+		},
+		{
+			"key": "lastname1",
+			"value": "Doe",
+			"type": "string"
+		},
+		{
+			"key": "firstname2",
+			"value": "Jade",
+			"type": "string"
+		},
+		{
+			"key": "lastname2",
+			"value": "Smith",
+			"type": "string"
+		},
+		{
+			"key": "base-url",
+			"value": "http://localhost:9090/death-registration-service/death-services",
+			"type": "string"
+		}
+	]
+}

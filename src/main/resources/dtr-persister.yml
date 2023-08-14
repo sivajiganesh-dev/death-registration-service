@@ -6,12 +6,13 @@ serviceMaps:
       fromTopic: save-dtr-application
       isTransaction: true
       queryMaps:
-        - query: INSERT INTO egov_dt_registration(id, tenantid, applicationno, firstname, lastname, placeofdeath, timeofdeath,createdby,lastmodifiedby,createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO egov_dt_registration(id, tenantid, applicationno, applicantid, firstname, lastname, placeofdeath, timeofdeath,createdby,lastmodifiedby,createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: DeathRegistrationApplications.*
           jsonMaps:
             - jsonPath: $.DeathRegistrationApplications.*.id
             - jsonPath: $.DeathRegistrationApplications.*.tenantId
             - jsonPath: $.DeathRegistrationApplications.*.applicationNumber
+            - jsonPath: $.DeathRegistrationApplications.*.applicantId
             - jsonPath: $.DeathRegistrationApplications.*.deceasedFirstName
             - jsonPath: $.DeathRegistrationApplications.*.deceasedLastName
             - jsonPath: $.DeathRegistrationApplications.*.placeOfDeath

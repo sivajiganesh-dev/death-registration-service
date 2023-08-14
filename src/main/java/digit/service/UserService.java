@@ -69,8 +69,6 @@ public class UserService {
             .name(applicant.getName())
             .type(applicant.getUserType())
             .active(true)
-            //.permanentAddress(application.getAddressOfDeceased().toString())
-            //.correspondencePincode(application.getAddressOfDeceased().toString())
             .build();
     }
 
@@ -119,6 +117,7 @@ public class UserService {
                 .roles(user.getRoles())
                 .name(user.getName())
                 .userType(user.getUserType())
+                .id(user.getUuid())
                 .build();
             application.setApplicant(applicant);
         }
